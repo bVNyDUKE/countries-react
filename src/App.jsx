@@ -7,7 +7,7 @@ import CountryPage from './pages/CountryPage'
 function App() {
 
   return(
-    <div className='m-auto bg-grey-955 dark:bg-blue-955 min-h-screen'>
+    <main className='m-auto bg-grey-955 dark:bg-blue-955 min-h-screen'>
 
       <NavBar />
 
@@ -17,7 +17,7 @@ function App() {
         <Route path="*" element={<p>404 not found</p>} />
       </Routes>
 
-    </div>
+    </main>
   )
 }
 

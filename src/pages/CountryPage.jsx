@@ -59,7 +59,7 @@ export default function CountryPage(){
                               :
                               <div className='grid grid-cols-3 gap-5 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4'>
                                 {nameData.map( b =>
-                                  <Link key={b.name} to={`/${b.alpha3Code}`} as='button'
+                                  <Link key={b.name} to={`/${b.alpha3Code}`}
                                     className='bg-white text-blue-955 dark:bg-blue-950 dark:text-gray-400 w-26 md:w-32 p-2 truncate rounded-sm shadow-2xl'>
                                     {b.name}</Link>
                                 )}

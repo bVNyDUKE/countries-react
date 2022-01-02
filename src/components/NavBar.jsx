@@ -23,8 +23,11 @@ export default function NavBar(){
   return(
     <nav className='p-6  bg-white dark:bg-blue-950'>
       <div className='flex justify-between items-center container m-auto'>
-        <div className='text-xl font-bold text-blue-955 dark:text-white'>
-          <Link to="/">Where in the world?</Link></div>
+        <Link to="/">
+          <h1 className='text-xl font-bold text-blue-955 dark:text-white'>
+          Where in the world?
+          </h1>
+        </Link>
         <div className='font-semibold flex justify-start dark:text-white'>
           <DarkModeIcon />
           Dark Mode
