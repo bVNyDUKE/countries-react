@@ -22,7 +22,7 @@ export default function CountriesGrid(){
         <RegionSelection setRegion={setRegion} />
       </div>
 
-      <main className='grid px-10 sm:px-0 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10 items-stretch mt-10 container m-auto text-blue-960 dark:text-white '>
+      <div className='grid px-10 sm:px-0 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-10 items-stretch mt-10 container m-auto text-blue-960 dark:text-white '>
         {
           isLoading ?  [0,1,2,3,4,5,6,7].map( x => <CardLoader key={x} />)
             : error ? `Error ${error.message}`
@@ -41,7 +41,7 @@ export default function CountriesGrid(){
                     region={c.region} />
                 </Link>)
         }
-      </main>
+      </div>
     </>
   )
 }
