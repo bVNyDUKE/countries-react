@@ -10,6 +10,8 @@ export default function RegionSelection({ setRegion }){
     selected,
     setSelected } = useDropdown(false)
 
+  selected === '' ? setRegion('') : null
+
   function dropdownClick(region){
     setRegion(region)
     setSelected(region)

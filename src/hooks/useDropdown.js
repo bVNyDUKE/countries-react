@@ -16,13 +16,12 @@ export default function useDropdown(initState){
     //if click is on trigger element, and a selection is active, clear the selection
     if(triggerRef.current &&
         triggerRef.current.contains(event.target) && selected !== '') {
-      setSelected('')
+      return setSelected('')
     }
 
     //if modal is open and click is outside modal, close it
     if(nodeRef.current &&
       !nodeRef.current.contains(event.target)) {
-      console.log('closing modal')
       return setShow(false)
     }
   }
