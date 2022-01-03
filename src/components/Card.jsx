@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Card({ name, flag, capital, population, region }){
   return(
-    <article className='bg-white text-blue-955 dark:bg-blue-950 dark:text-white shadow-md rounded-md overflow-hidden hover:cursor-pointer hover:shadow-xl'>
+    <article className='bg-white text-blue-955 dark:bg-blue-950 dark:text-white shadow-md rounded-md overflow-hidden hover:cursor-pointer hover:shadow-xl transition-colors ease-in-out duration-1000'>
 
       <img className='object-cover md:w-[365px] md:h-[256px] float-left' src={flag} alt={name} />
 

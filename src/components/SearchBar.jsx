@@ -15,7 +15,7 @@ export default function SearchBar({ setFilter }){
   }
 
   return(
-    <div className='bg-white dark:bg-blue-950 min-w-min w-full lg:w-1/3 h-16 flex items-center space-x-8 rounded-md shadow-md text-gray-950 dark:text-white'>
+    <div className='bg-white dark:bg-blue-950 min-w-min w-full lg:w-1/3 h-16 flex items-center space-x-8 rounded-md shadow-md text-gray-950 dark:text-white transition-colors ease-in-out duration-1000'>
 
       <div className='ml-8'>
         {searching ?
@@ -43,7 +43,7 @@ export default function SearchBar({ setFilter }){
         type="text" name="search" id="search"
         onChange={searchChange}
         placeholder='Search for a country...'
-        className='flex-grow focus:outline-none dark:bg-blue-950 text-grey-950 dark:text-white'
+        className='flex-grow focus:outline-none dark:bg-blue-950 text-grey-950 dark:text-white transition-colors ease-in-out duration-1000'
       />
 
     </div>

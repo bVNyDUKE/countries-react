@@ -7,7 +7,7 @@ import CountryPage from './pages/CountryPage'
 function App() {
 
   return(
-    <main className='m-auto bg-grey-955 dark:bg-blue-955 min-h-screen'>
+    <main className='m-auto bg-grey-955 dark:bg-blue-955 min-h-screen transition-colors ease-in-out duration-1000'>
 
       <NavBar />
 
