@@ -15,8 +15,8 @@ export default function CountryPage(){
 
       <div className='mb-20'>
 
-        <button onClick={() => history.back() } className='flex justify-center items-center bg-white text-blue-955 dark:bg-blue-950 dark:text-gray-400 w-32 p-2 space-x-2 rounded-sm shadow-2xl'>
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-955 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button onClick={() => history.back() } className='flex justify-center items-center bg-white text-blue-955 dark:bg-blue-950 dark:text-gray-400 w-32 p-2 space-x-2 rounded-sm shadow-2xl transition-colors ease-in-out duration-1000'>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-955 dark:text-white transition-colors ease-in-out duration-1000" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
           </svg>
           <div className='font-semibold'>Back</div>
@@ -30,7 +30,7 @@ export default function CountryPage(){
           : error ? (<p>Error {error.message}</p>)
             :
             (
-              <div className='lg:flex lg:justify-start lg:space-x-10'>
+              <div className='lg:flex lg:justify-start lg:space-x-10 transition-colors ease-in-out duration-1000'>
                 <img className='object-cover sm:w-[645px] sm:h-[465px] float-left' src={data.flags.svg} />
 
                 <div className='clear-left'>
@@ -60,7 +60,7 @@ export default function CountryPage(){
                               <div className='grid grid-cols-3 gap-5 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4'>
                                 {nameData.map( b =>
                                   <Link key={b.name} to={`/${b.alpha3Code}`}
-                                    className='bg-white text-blue-955 dark:bg-blue-950 dark:text-gray-400 w-26 md:w-32 p-2 truncate rounded-sm shadow-2xl'>
+                                    className='bg-white text-blue-955 dark:bg-blue-950 dark:text-gray-400 w-26 md:w-32 p-2 truncate rounded-sm shadow-2xl transition-colors ease-in-out duration-1000'>
                                     {b.name}</Link>
                                 )}
                               </div>
