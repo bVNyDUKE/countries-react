@@ -11,15 +11,16 @@ export default function CountriesGrid() {
   const [filter, setFilter] = useState("");
   const [region, setRegion] = useState("");
 
-  let filtered = [];
-  filter !== ""
-    ? (filtered = data.filter((country) =>
-        country.name.official.toLowerCase().includes(filter.toLowerCase())
-      ))
-    : (filtered = data);
-  region !== ""
-    ? (filtered = filtered.filter((country) => country.region.includes(region)))
-    : null;
+  const filtered = React.useMemo(() => {
+    let filtered = data
+    if(filter){
+      filtered = data.filter((country) => country.name.official.toLowerCase().includes(filter.toLowerCase()))
+    }
+    if(region){
+      filtered = filtered.filter((country) => country.region.includes(region))
+    }
+    return filtered;
+  }, [filter, region, data]);
 
   return (
     <>
